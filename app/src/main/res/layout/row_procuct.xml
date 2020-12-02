@@ -18,7 +18,7 @@
             android:layout_height="75dp"
             android:id="@+id/prodImage"
             android:layout_centerVertical="true"
-            android:src="@drawable/person"
+
             />
         <LinearLayout
             android:layout_width="match_parent"
@@ -29,38 +29,69 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name: "/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/rProdName"
-                android:text="Product Name"
+                android:text="Name"
                 android:textSize="20dp"
-                android:textStyle="bold"
+
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
                 android:textColor="@color/colorBlack"
                 />
+            </LinearLayout>
+             <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price: "/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/rProdPrice"
                 android:text="Product Price"
                 android:textSize="18dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
                 android:fontFamily="sans-serif-light"
                 />
+
+             </LinearLayout>
+             <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description: "/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/rPprodDescription"
                 android:text="Product Description"
                 android:textSize="18dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
                 android:fontFamily="sans-serif-light"
                 />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/RexpirationDate"
-                android:text="Product Expiration DAte"
-                android:textSize="18dp"
-                android:fontFamily="sans-serif-light" />
+             </LinearLayout>
+
 
         </LinearLayout>
 

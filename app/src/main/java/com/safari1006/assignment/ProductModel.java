@@ -3,15 +3,15 @@ package com.safari1006.assignment;
 import org.json.JSONObject;
 
 public class ProductModel extends JSONObject {
-    String id, name, price, description, image, expirationDate;
+    String id, name, price, description, image;
 
-    public ProductModel(String id, String name, String price, String description, String image, String expirationDate) {
+    public ProductModel(String id, String name, String price, String description, String image) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.description = description;
         this.image = image;
-        this.expirationDate = expirationDate;
+
     }
 
     public String getId() {
@@ -34,8 +34,6 @@ public class ProductModel extends JSONObject {
         return image;
     }
 
-    public String getExpirationDate() {
-        return expirationDate;
-    }
+
 }
 

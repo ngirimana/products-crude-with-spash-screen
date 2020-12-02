@@ -72,8 +72,7 @@ public class AllProduct extends AppCompatActivity {
                         JSONObject productObject=secondArr.getJSONObject(i);
                       ProductModel productModel=new ProductModel(productObject.getString("_id"),productObject.getString("name"),
                               productObject.getString("price"),productObject.getString("description"),
-                              productObject.getString("image"),
-                            productObject.getString("date_of_expiration"));
+                              productObject.getString("image"));
                         products.add(productModel);
                     }
                     System.out.println(secondArr);
