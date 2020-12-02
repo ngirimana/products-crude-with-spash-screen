@@ -18,7 +18,7 @@ public class SlideActivity extends AppCompatActivity {
         adapter =new SlideViewPageAdapter(this);
         viewPager.setAdapter(adapter);
         if(isAlreadyOpened()){
-            Intent intent= new Intent(SlideActivity.this,AddProduct.class);
+            Intent intent= new Intent(SlideActivity.this,AllProduct.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK| Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
         }

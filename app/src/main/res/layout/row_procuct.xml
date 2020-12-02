@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="3dp"
+    app:cardElevation="3dp"
+    app:cardBackgroundColor="@color/colorWhite"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:id="@+id/prodImage"
+            android:layout_centerVertical="true"
+            android:src="@drawable/person"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/prodImage"
+            android:layout_toEndOf="@+id/prodImage"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rProdName"
+                android:text="Product Name"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rProdPrice"
+                android:text="Product Price"
+                android:textSize="18dp"
+                android:fontFamily="sans-serif-light"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rPprodDescription"
+                android:text="Product Description"
+                android:textSize="18dp"
+                android:fontFamily="sans-serif-light"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/RexpirationDate"
+                android:text="Product Expiration DAte"
+                android:textSize="18dp"
+                android:fontFamily="sans-serif-light" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

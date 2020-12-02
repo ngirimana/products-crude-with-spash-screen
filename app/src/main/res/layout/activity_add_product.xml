@@ -34,6 +34,7 @@
         android:layout_marginRight="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/colorPrimary"
         android:src="@drawable/add_to_shop_icon"
         />
 
@@ -48,6 +49,7 @@
         android:layout_marginRight="32dp"
         android:text="Add Product To Store"
         android:textColor="@color/colorWhite"
+        android:backgroundTint="@color/colorPrimary"
         android:textSize="24dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/imageView"
@@ -58,18 +60,17 @@
     <EditText
         android:id="@+id/productName"
         android:layout_width="0dp"
-        android:layout_height="55dp"
+        android:layout_height="45dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:background="@drawable/rounded_border"
-        android:drawablePadding="16dp"
         android:ems="10"
         android:hint="Product Name"
         android:inputType="text"
-        android:padding="16dp"
+        android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,7 +79,7 @@
     <EditText
         android:id="@+id/productPrice"
         android:layout_width="0dp"
-        android:layout_height="55dp"
+        android:layout_height="45dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="16dp"
@@ -89,7 +90,7 @@
         android:ems="10"
         android:hint="Product Price"
         android:inputType="number"
-        android:padding="16dp"
+        android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
@@ -97,7 +98,7 @@
     <EditText
         android:id="@+id/productDesc"
         android:layout_width="0dp"
-        android:layout_height="55dp"
+        android:layout_height="45dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="16dp"
@@ -108,7 +109,7 @@
         android:ems="10"
         android:hint="Product Description"
         android:inputType="textMultiLine"
-        android:padding="16dp"
+        android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
@@ -116,7 +117,7 @@
     <EditText
         android:id="@+id/productExpiryDate"
         android:layout_width="0dp"
-        android:layout_height="55dp"
+        android:layout_height="45dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="16dp"
@@ -126,12 +127,32 @@
         android:drawablePadding="16dp"
         android:ems="10"
         android:hint="Product Expiration Date"
-        android:inputType="date"
-        android:padding="16dp"
+        android:inputType="datetime"
+        android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/productDesc" />
+    <EditText
+        android:id="@+id/productImageLink"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/rounded_border"
+        android:drawablePadding="16dp"
+        android:ems="10"
+        android:hint="Product Image Link"
+        android:inputType="text"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productExpiryDate"
+        tools:ignore="UnknownId" />
 
 
     <Button
@@ -153,7 +174,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/productExpiryDate"
+        app:layout_constraintTop_toBottomOf="@+id/productImageLink"
         app:layout_constraintVertical_bias="0.103" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

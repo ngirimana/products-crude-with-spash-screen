@@ -2,16 +2,13 @@
     <!-- Base application theme. -->
     <style name="Theme.Assignment" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-<!--        <item name="colorPrimary">@color/colorWhite</item>-->
-<!--        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
-<!--        <item name="colorBlack">@color/colorBlack</item>-->
-<!--        <item name="colorWhite">@color/colorWhite</item>-->
-<!--        <item name="colorGrey">@color/colorGrey</item>-->
-<!--        <item name="colorAccent">@color/colorAccent</item>-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorWhite</item>
 
 
-<!--        <item name="android:statusBarColor" tools:targetApi="l">@color/colorWhite</item>-->
-<!--        <item name="android:background">@color/colorPrimaryDark</item>-->
-        <!-- Customize your theme here. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/colorWhite</item>
+        <item name="android:background">@color/colorWhite</item>
+
     </style>
 </resources>

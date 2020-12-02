@@ -3,6 +3,7 @@ package com.safari1006.assignment;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -26,7 +27,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AddProduct extends AppCompatActivity {
-    private EditText prodName,prodDesc,prodPrice,prodExpiry;
+    private EditText prodName,prodDesc,prodPrice,prodExpiry,imageLink;
     private Button btnAddProd;
      String url="https://product-crud-op.herokuapp.com/api/v1/products/add-product";
 
@@ -40,6 +41,7 @@ public class AddProduct extends AppCompatActivity {
         prodPrice=findViewById(R.id.productPrice);
         prodExpiry=findViewById(R.id.productExpiryDate);
         btnAddProd= findViewById(R.id.btnAddProd);
+        imageLink=findViewById(R.id.productImageLink);
 
         String name =prodName.getText().toString();
         String description =""+prodDesc.getText().toString();
@@ -53,12 +55,13 @@ public class AddProduct extends AppCompatActivity {
                     ""+prodName.getText().toString(),
                     ""+prodPrice.getText().toString(),
                     ""+prodDesc.getText().toString(),
-                    ""+prodExpiry.getText().toString()
+                    ""+prodExpiry.getText().toString(),
+                        ""+imageLink.getText().toString()
                         );}
         });
     }
 
-    private void addProduct(String name, String price, String description, String date_of_expiration) {
+    private void addProduct(String name, String price, String description, String date_of_expiration, String imageLink) {
 
         final JSONObject jsonObject = new JSONObject();
         try {
@@ -66,6 +69,7 @@ public class AddProduct extends AppCompatActivity {
             jsonObject.put("price",price);
             jsonObject.put("description", description);
             jsonObject.put("date_of_expiration", date_of_expiration);
+            jsonObject.put("image",imageLink);
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -75,8 +79,11 @@ public class AddProduct extends AppCompatActivity {
             @Override
             public void onResponse(JSONObject response) {
                 try {
-                    System.out.println(response);
+
                     Toast.makeText(AddProduct.this, "Added Successfully", Toast.LENGTH_SHORT).show();
+                    Intent intent= new Intent(AddProduct.this,AllProduct.class);
+                    startActivity(intent);
+
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -85,7 +92,7 @@ public class AddProduct extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 System.out.println(jsonObject);
-                Toast.makeText(AddProduct.this, "Added failed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(AddProduct.this, (CharSequence) error, Toast.LENGTH_SHORT).show();
             }
         }) {
             @NonNull
