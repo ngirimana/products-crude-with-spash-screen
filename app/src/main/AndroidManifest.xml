@@ -3,7 +3,7 @@
     package="com.safari1006.assignment">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Assignment">
+        <activity android:name=".UpdateProduct"></activity>
         <activity android:name=".SlideActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,11 +19,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AllProduct"/>
-        <activity android:name=".AddProduct"/>
-<!--        <activity android:name=".AddProduct" />-->
-
-<!--        <activity android:name=".MainActivity" />-->
+        <activity android:name=".AllProduct" />
+        <activity android:name=".AddProduct" />
     </application>
 
 </manifest>

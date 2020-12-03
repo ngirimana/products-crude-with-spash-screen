@@ -30,6 +30,7 @@ public class AllProduct extends AppCompatActivity {
     final String GET_URL="https://product-crud-op.herokuapp.com/api/v1/products/all";
     ProductModel productModel;
     RecyclerView recyclerView;
+    ProductAdapter productAdapter;
    List<ProductModel> products;
    ActionBar actionBar;
     FloatingActionButton fab;
@@ -45,6 +46,8 @@ public class AllProduct extends AppCompatActivity {
         getAllProducts();
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         recyclerView.setHasFixedSize(true);
+
+
         fab =findViewById(R.id.addFabButton);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,8 +79,9 @@ public class AllProduct extends AppCompatActivity {
                         products.add(productModel);
                     }
                     System.out.println(secondArr);
-                    ProductAdapter productAdapter=new ProductAdapter(products);
+                    ProductAdapter productAdapter=new ProductAdapter(products,getApplicationContext());
                     recyclerView.setAdapter(productAdapter);
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
