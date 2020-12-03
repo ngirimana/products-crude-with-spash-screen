@@ -28,8 +28,6 @@
         android:elevation="6dp"
         android:src="@drawable/add_icon"
         android:backgroundTint="@color/colorPrimary"
-
-
         />
 
 </RelativeLayout>
